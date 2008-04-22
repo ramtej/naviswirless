@@ -15,8 +15,8 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.StringTokenizer;
 import javax.sound.sampled.AudioFileFormat;
-import navisclientservices.ClientServices_Stub;
-import navisclientservices.nameValuePair;
+import navisjmewsclient.ClientServices_Stub;
+import navisjmewsclient.nameValuePair;
 
 /**
  *
