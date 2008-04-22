@@ -15,8 +15,12 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.StringTokenizer;
 import javax.sound.sampled.AudioFileFormat;
+import navisaxiswsclient.ClientServicesPortBindingStub;
+import navisaxiswsclient.ClientServices_ServiceLocator;
+import navisaxiswsclient.NameValuePair;
+import navisaxiswsclient.SynchConfig;
+import navisaxiswsclient.SynchConfigResponse;
 import navisjmewsclient.ClientServices_Stub;
-import navisjmewsclient.nameValuePair;
 
 /**
  *
@@ -391,18 +395,17 @@ public class NavisMain {
         try {
             //Web Services
             //JavaME WS Client JSR-172
-            ClientServices_Stub wsStub = new ClientServices_Stub();
-            wsStub._setProperty(javax.xml.rpc.Stub.USERNAME_PROPERTY, username);
-            wsStub._setProperty(javax.xml.rpc.Stub.PASSWORD_PROPERTY, password);
+//            ClientServices_Stub wsStub = new ClientServices_Stub();
+//            wsStub._setProperty(javax.xml.rpc.Stub.USERNAME_PROPERTY, username);
+//            wsStub._setProperty(javax.xml.rpc.Stub.PASSWORD_PROPERTY, password);
+//            nameValuePair[] params = wsStub.synchConfig().getParams();
 
-            nameValuePair[] params = wsStub.synchConfig().getParams();
-
-            //AXIS client
-            //ClientServicesPortBindingStub stub = (ClientServicesPortBindingStub)new ClientServices_ServiceLocator().getClientServicesPort();
-            //stub._setProperty(javax.xml.rpc.Stub.USERNAME_PROPERTY, username);
-            //stub._setProperty(javax.xml.rpc.Stub.PASSWORD_PROPERTY, password);
-            //SynchConfigResponse response = stub.synchConfig(new SynchConfig());
-            //NameValuePair[] params = response.getConfigParams().getParams();
+            //AXIS WS Client
+            ClientServicesPortBindingStub stub = (ClientServicesPortBindingStub)new ClientServices_ServiceLocator().getClientServicesPort();
+            stub._setProperty(javax.xml.rpc.Stub.USERNAME_PROPERTY, username);
+            stub._setProperty(javax.xml.rpc.Stub.PASSWORD_PROPERTY, password);
+            SynchConfigResponse response = stub.synchConfig(new SynchConfig());
+            NameValuePair[] params = response.getConfigParams().getParams();
 
             configurations.clear();
 
