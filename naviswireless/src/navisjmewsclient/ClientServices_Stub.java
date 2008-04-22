@@ -1,4 +1,4 @@
-package navisclientservices;
+package navisjmewsclient;
 
 import javax.xml.rpc.JAXRPCException;
 import javax.xml.namespace.QName;

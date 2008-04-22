@@ -1,4 +1,4 @@
-package navisclientservices;
+package navisjmewsclient;
 import javax.xml.namespace.QName;
 
 public interface ClientServices extends java.rmi.Remote {
