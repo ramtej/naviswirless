@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="properties">
+
+<!-- 
+	This file contains configurable parameters referenced by the build.xml file.
+	Used only for jwsdp environment
+-->
+	<property file="build.properties"/>
+
+    <property file="${lib.dir}/lib.properties"/>
+                
+    <!-- Properties for running unit tests with tomcat -->
+    <property name="tomcat.server" value="localhost"/>
+    <property name="http.port" value="8080"/>
+    <property name="tomcat.manager.url" value="http://${tomcat.server}:${http.port}/manager"/>
+    <property name="tomcat.username" value="admin"/>
+    <property name="tomcat.password" value="admin"/>
+	
+	
+    <!-- Build and deploy properties -->
+    <property environment="env"/>
+    <property name="env.COMPUTERNAME" value="${env.HOSTNAME}"/>
+    <!-- These values are only used if not specified in build.properties -->
+    <property name="tomcat.home" value="${env.CATALINA_HOME}"/>    
+    <!-- The target directory for building the packed web application -->
+    <property name="webapp.dist" value="${dist.dir}/webapps"/>    
+    <!-- The target directory for building the unpacked web application -->
+    <property name="webapp.target" value="${build.dir}/${webapp.name}"/>    
+    <!-- Should Java compilations set the debug compiler option? -->
+    <property name="compile.debug" value="true"/>
+    <!-- Should Java compilations set the deprecation compiler option? -->
+    <property name="compile.deprecation" value="false"/>
+    <!-- Should Java compilations set the optimize compiler option? -->
+    <property name="compile.optimize" value="false"/>
+    <!-- The source directory for the whole project -->
+    <property name="src" value="${basedir}/src"/>
+    <property name="tar.user" value="ant"/>
+    <property name="tar.group" value="ant"/>
+    <property name="tar.mode" value="644"/>
+	
+    <!-- Web -->
+    <path id="web.compile.classpath">
+    	<pathelement location="${jaf.jar}"/>
+        <pathelement location="${oro.jar}"/>
+        <pathelement location="${commons-io.jar}"/>
+        <pathelement location="${commons-digester.jar}"/>
+        <pathelement location="${commons-logging.jar}"/>
+        <pathelement location="${commons-beanutils.jar}"/>
+        <pathelement location="${commons-collections.jar}"/>
+        <pathelement location="${commons-lang.jar}"/>
+        <pathelement location="${commons-validator.jar}"/>
+        <pathelement location="${servletapi.jar}"/>
+        <pathelement location="${log4j.jar}"/>
+        <fileset dir="${xml.dir}" includes="*.jar"/>
+        <fileset dir="${jaxp.dir}" includes="*.jar"/>
+        <fileset dir="${jaxb.dir}" includes="*.jar"/>
+        <fileset dir="${jaxrpc.dir}" includes="*.jar"/>
+		<fileset dir="${jaxws.dir}" includes="*.jar"/>
+        <fileset dir="${saaj.dir}" includes="*.jar"/>
+        <fileset dir="${jaxr.dir}" includes="*.jar"/>
+        <fileset dir="${fastinfoset.dir}" includes="*.jar"/>
+        <fileset dir="${sjsxp.dir}" includes="*.jar"/>
+        <fileset dir="${xmldsig.dir}" includes="*.jar"/>
+        <fileset dir="${xws-security.dir}" includes="*.jar"/>
+    </path>
+    <path id="web.test.classpath">
+        <path refid="web.compile.classpath"/>
+        <pathelement location="${junit.jar}"/>
+     	<fileset dir="${servletapi.dir}" includes="*.jar"/>
+    </path>
+        
+    <property name="inheritAll" value="true"/>
+    
+</project>
+
+

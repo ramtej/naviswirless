@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.ant.freeform</type>
+    <configuration>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <name>naviswebservices</name>
+        </general-data>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/2">
+            <!-- Do not use Project Properties customizer when editing this file manually. -->
+            <name>naviswebservices</name>
+            <properties/>
+            <folders>
+                <source-folder>
+                    <label>naviswebservices</label>
+                    <location>.</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>src\web</label>
+                    <type>java</type>
+                    <location>src/web</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>test\web</label>
+                    <type>java</type>
+                    <location>test/web</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+            </folders>
+            <ide-actions>
+                <action name="build">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>compile-web</target>
+                </action>
+                <action name="javadoc">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>javadoc</target>
+                </action>
+                <action name="run">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>start</target>
+                </action>
+                <action name="test">
+                    <script>nbproject/nbjdk.xml</script>
+                    <target>generate-ws-testclient</target>
+                </action>
+            </ide-actions>
+            <view>
+                <items>
+                    <source-folder style="packages">
+                        <label>src\web</label>
+                        <location>src/web</location>
+                    </source-folder>
+                    <source-folder style="packages">
+                        <label>test\web</label>
+                        <location>test/web</location>
+                    </source-folder>
+                    <source-file>
+                        <location>build.xml</location>
+                    </source-file>
+                </items>
+                <context-menu>
+                    <ide-action name="build"/>
+                    <ide-action name="javadoc"/>
+                    <ide-action name="run"/>
+                    <ide-action name="test"/>
+                </context-menu>
+            </view>
+            <subprojects/>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/1">
+            <compilation-unit>
+                <package-root>src/web</package-root>
+                <classpath mode="compile">lib/ant-contrib-1.0b2/ant-contrib-1.0b2.jar;lib/jaf-1.0.2/activation.jar;lib/jakarta-commons/common-annotations.jar;lib/jakarta-commons/commons-attributes-api-2.1.jar;lib/jakarta-commons/commons-attributes-compiler-2.1.jar;lib/jakarta-commons/commons-attributes-plugin-2.1.jar;lib/jakarta-commons/commons-beanutils-bean-collections.jar;lib/jakarta-commons/commons-beanutils-core.jar;lib/jakarta-commons/commons-beanutils.jar;lib/jakarta-commons/commons-cli-1.0.jar;lib/jakarta-commons/commons-codec-1.3.jar;lib/jakarta-commons/commons-collections-3.1.jar;lib/jakarta-commons/commons-collections-testframework-3.1.jar;lib/jakarta-commons/commons-digester-1.7.jar;lib/jakarta-commons/commons-el.jar;lib/jakarta-commons/commons-fileupload-1.1.jar;lib/jakarta-commons/commons-io-1.2.jar;lib/jakarta-commons/commons-jelly-20050813.225330.jar;lib/jakarta-commons/commons-jelly-tags-define-1.0.jar;lib/jakarta-commons/commons-jelly-tags-jsl-1.0.jar;lib/jakarta-commons/commons-jelly-tags-xml-20050823.222913.jar;lib/jakarta-commons/commons-jexl-1.0.jar;lib/jakarta-commons/commons-jxpath-1.2.jar;lib/jakarta-commons/commons-lang-2.1.jar;lib/jakarta-commons/commons-logging-api.jar;lib/jakarta-commons/commons-logging.jar;lib/jakarta-commons/commons-validator-1.1.4.jar;lib/jakarta-log4j-1.2.13/log4j-1.2.13.jar;lib/jakarta-oro-2.0.8/jakarta-oro-2.0.8.jar;lib/jakarta-regexp-1.4/jakarta-regexp-1.4.jar;lib/junit-3.8.1/junit.jar;lib/junitperf-1.9.1/junitperf-1.9.1.jar;lib/servletapi-2.3/commons-el.jar;lib/servletapi-2.3/jsp-api.jar;lib/servletapi-2.3/servletapi-2.3.jar;lib/xml/fastinfoset/FastInfoset.jar;lib/xml/jaxb/jaxb-api.jar;lib/xml/jaxb/jaxb-impl.jar;lib/xml/jaxb/jaxb-xjc.jar;lib/xml/jaxb/jaxb1-impl.jar;lib/xml/jaxp/dom.jar;lib/xml/jaxp/dom4j-1.6.1.jar;lib/xml/jaxp/jaxen-1.1-beta-4.jar;lib/xml/jaxp/jaxp-api.jar;lib/xml/jaxp/sax.jar;lib/xml/jaxp/xalan.jar;lib/xml/jaxp/xercesImpl.jar;lib/xml/jaxr/jaxr-api.jar;lib/xml/jaxr/jaxr-impl.jar;lib/xml/jaxrpc/jaxrpc-api.jar;lib/xml/jaxrpc/jaxrpc-impl.jar;lib/xml/jaxrpc/jaxrpc-spi.jar;lib/xml/jaxws/jaxws-api.jar;lib/xml/jaxws/jaxws-rt.jar;lib/xml/jaxws/jaxws-tools.jar;lib/xml/jaxws/jsr181-api.jar;lib/xml/jaxws/jsr250-api.jar;lib/xml/jaxws/jaxws-api.jar;lib/xml/jaxws/jaxws-rt.jar;lib/xml/jaxws/jaxws-tools.jar;lib/xml/jaxws/jsr181-api.jar;lib/xml/jaxws/jsr250-api.jar;lib/xml/saaj/saaj-api.jar;lib/xml/saaj/saaj-impl.jar;lib/xml/sjsxp/jsr173_api.jar;lib/xml/sjsxp/sjsxp.jar;lib/xml/sjsxp/stax-ex.jar;lib/xml/sjsxp/streambuffer.jar;lib/xml/xmldsig/xmldsig.jar;lib/xml/xws-security/keyexport.jar;lib/xml/xws-security/pkcs12import.jar;lib/xml/xws-security/security-plugin.jar;lib/xml/xws-security/wss-provider-update.jar;lib/xml/xws-security/xws-security.jar;lib/xml/xws-security/xws-security_jaxrpc.jar;lib/xml/jaas.jar;lib/xml/relaxngDatatype.jar;lib/xml/resolver.jar;lib/xml/xmlsec.jar;lib/xml/xsdlib.jar</classpath>
+                <source-level>1.5</source-level>
+            </compilation-unit>
+            <compilation-unit>
+                <package-root>test/web</package-root>
+                <classpath mode="compile">lib/ant-contrib-1.0b2/ant-contrib-1.0b2.jar;lib/jaf-1.0.2/activation.jar;lib/jakarta-commons/common-annotations.jar;lib/jakarta-commons/commons-attributes-api-2.1.jar;lib/jakarta-commons/commons-attributes-compiler-2.1.jar;lib/jakarta-commons/commons-attributes-plugin-2.1.jar;lib/jakarta-commons/commons-beanutils-bean-collections.jar;lib/jakarta-commons/commons-beanutils-core.jar;lib/jakarta-commons/commons-beanutils.jar;lib/jakarta-commons/commons-cli-1.0.jar;lib/jakarta-commons/commons-codec-1.3.jar;lib/jakarta-commons/commons-collections-3.1.jar;lib/jakarta-commons/commons-collections-testframework-3.1.jar;lib/jakarta-commons/commons-digester-1.7.jar;lib/jakarta-commons/commons-el.jar;lib/jakarta-commons/commons-fileupload-1.1.jar;lib/jakarta-commons/commons-io-1.2.jar;lib/jakarta-commons/commons-jelly-20050813.225330.jar;lib/jakarta-commons/commons-jelly-tags-define-1.0.jar;lib/jakarta-commons/commons-jelly-tags-jsl-1.0.jar;lib/jakarta-commons/commons-jelly-tags-xml-20050823.222913.jar;lib/jakarta-commons/commons-jexl-1.0.jar;lib/jakarta-commons/commons-jxpath-1.2.jar;lib/jakarta-commons/commons-lang-2.1.jar;lib/jakarta-commons/commons-logging-api.jar;lib/jakarta-commons/commons-logging.jar;lib/jakarta-commons/commons-validator-1.1.4.jar;lib/jakarta-log4j-1.2.13/log4j-1.2.13.jar;lib/jakarta-oro-2.0.8/jakarta-oro-2.0.8.jar;lib/jakarta-regexp-1.4/jakarta-regexp-1.4.jar;lib/junit-3.8.1/junit.jar;lib/junitperf-1.9.1/junitperf-1.9.1.jar;lib/servletapi-2.3/commons-el.jar;lib/servletapi-2.3/jsp-api.jar;lib/servletapi-2.3/servletapi-2.3.jar;lib/xml/jaas.jar;lib/xml/relaxngDatatype.jar;lib/xml/resolver.jar;lib/xml/xmlsec.jar;lib/xml/xsdlib.jar;lib/xml/fastinfoset/FastInfoset.jar;lib/xml/jaxb/jaxb-api.jar;lib/xml/jaxb/jaxb-impl.jar;lib/xml/jaxb/jaxb-xjc.jar;lib/xml/jaxb/jaxb1-impl.jar;lib/xml/jaxp/dom.jar;lib/xml/jaxp/dom4j-1.6.1.jar;lib/xml/jaxp/jaxen-1.1-beta-4.jar;lib/xml/jaxp/jaxp-api.jar;lib/xml/jaxp/sax.jar;lib/xml/jaxp/xalan.jar;lib/xml/jaxp/xercesImpl.jar;lib/xml/jaxr/jaxr-api.jar;lib/xml/jaxr/jaxr-impl.jar;lib/xml/jaxrpc/jaxrpc-api.jar;lib/xml/jaxrpc/jaxrpc-impl.jar;lib/xml/jaxrpc/jaxrpc-spi.jar;lib/xml/jaxws/jaxws-api.jar;lib/xml/jaxws/jaxws-rt.jar;lib/xml/jaxws/jaxws-tools.jar;lib/xml/jaxws/jsr181-api.jar;lib/xml/jaxws/jsr250-api.jar;lib/xml/saaj/saaj-api.jar;lib/xml/saaj/saaj-impl.jar;lib/xml/sjsxp/jsr173_api.jar;lib/xml/sjsxp/sjsxp.jar;lib/xml/sjsxp/stax-ex.jar;lib/xml/sjsxp/streambuffer.jar;lib/xml/xmldsig/xmldsig.jar;lib/xml/xws-security/keyexport.jar;lib/xml/xws-security/pkcs12import.jar;lib/xml/xws-security/security-plugin.jar;lib/xml/xws-security/wss-provider-update.jar;lib/xml/xws-security/xws-security.jar;lib/xml/xws-security/xws-security_jaxrpc.jar</classpath>
+                <source-level>1.5</source-level>
+            </compilation-unit>
+        </java-data>
+    </configuration>
+</project>
