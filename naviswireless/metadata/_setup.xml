@@ -1,0 +1,159 @@
+<wap-provisioningdoc>
+    <characteristic type="Install">
+        <parm name="InstallPhase" value="install" />
+        <parm name="ProcessorType" value="2577" />
+        <parm name="OSVersionMin" value="4.10" />
+        <parm name="OSVersionMax" value="99.99" />
+        <parm name="BuildNumberMin" value="0" />
+        <parm name="BuildNumberMax" value="-536870912" />
+        <parm name="AppName" value="Navis Wireless" />
+        <parm name="InstallDir" value="%CE1%\Navis" translation="install" />
+        <parm name="NumDirs" value="4" />
+        <parm name="NumFiles" value="21" />
+        <parm name="NumRegKeys" value="0" />
+        <parm name="NumRegVals" value="0" />
+        <parm name="NumShortcuts" value="0" />
+    </characteristic>  
+    
+    <characteristic type="FileOperation">
+	
+    <characteristic type="%InstallDir%" translation="install">         
+		<characteristic type="MakeDir"/>
+        <characteristic type="naviswirelesscdc.jar" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="naviswirelesscdc.jar"/>
+            </characteristic>
+        </characteristic> 
+    </characteristic>
+	
+    <characteristic type="%InstallDir%\jre\bin" translation="install">
+		<characteristic type="MakeDir" />
+        <characteristic type="jvm.exe" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="00000jvm.003" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="javaio.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="00javaio.004" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="javalang.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="javalang.005" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="javalangreflect.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="JAVALA~1.006" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="javanet.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="0javanet.007" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="javanio.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="0javanio.008" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="javautil.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="javautil.009" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="xmlj.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="0000xmlj.010" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="wcepeer.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="0wcepeer.011" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="wcesound.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="wcesound.012" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="zlibce.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="00zlibce.013" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="libwce.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="00libwce.014" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="libiconv.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="libiconv.015" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="libxml2.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="0libxml2.016" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="libxslt.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="0libxslt.017" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="classpath.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="CLASSP~1.018" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="native-lib.dll" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="NATIVE~1.019" />
+            </characteristic>
+        </characteristic>
+    </characteristic>
+    <characteristic type="%InstallDir%\jre\lib" translation="install">
+    <characteristic type="MakeDir" />
+        <characteristic type="rt.jar" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="000000rt.001" />
+            </characteristic>
+        </characteristic>
+        <characteristic type="resource.jar" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="resource.002" />
+            </characteristic>
+        </characteristic>
+    </characteristic>
+    
+    <characteristic type="%CE11%" translation="install">
+        <characteristic type="MakeDir" />
+        <characteristic type="Navis Wireless.lnk" translation="install">
+            <characteristic type="Shortcut">
+                <parm name="Source" value="%InstallDir%\jre\bin\jvm.exe" translation="install" />
+            </characteristic>
+        </characteristic>
+    </characteristic>
+
+    <!--
+    <characteristic type="%CE11%" translation="install">         
+	<characteristic type="MakeDir"/>
+        <characteristic type="Navis Wireless.lnk" translation="install">
+            <characteristic type="Extract">
+                <parm name="Source" value="Navis Wireless.lnk"/>
+            </characteristic>
+        </characteristic> 
+    </characteristic>    
+    -->
+    
+    </characteristic>
+    
+    <characteristic type="Registry">
+        <characteristic type="HKCU\Software\Mysaifu\Mysaifu JVM">
+        <parm name="DefaultMaxHeapSize" value="10" datatype="integer" />
+        <parm name="DefaultCurrentDirectory" value="%InstallDir%" datatype="string" />
+    </characteristic>        
+
+</wap-provisioningdoc>

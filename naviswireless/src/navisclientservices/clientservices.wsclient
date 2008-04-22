@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclientconfig serviceType="jsr-172" version="1.0">
+    <client>
+        <project>naviswirelesscdc</project>
+        <class location="${src.dir}" type="navisclientservices.clientservices"/>
+        <property name="DataBinding" value="false"/>
+        <property name="cldc11" value="true"/>
+    </client>
+    <services>
+        <service file="clientservices.wsdl" url="http://192.168.1.2:8080/clientservices/clientservices?wsdl"/>
+    </services>
+</wsclientconfig>

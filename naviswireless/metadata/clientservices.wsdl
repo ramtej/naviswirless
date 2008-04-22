@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:tns="http://www.naviscorp.us/soa/wsdl/clientservices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.naviscorp.us/soa/wsdl/clientservices" name="ClientServices">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://www.naviscorp.us/soa/wsdl/clientservices" schemaLocation="http://localhost:8080/clientservices/clientservices?xsd=1"/>
+    </xsd:schema>
+  </types>
+  <message name="synchConfig">
+    <part element="tns:synchConfig" name="parameters"/>
+  </message>
+  <message name="synchConfigResponse">
+    <part element="tns:synchConfigResponse" name="parameters"/>
+  </message>
+  <message name="upload">
+    <part element="tns:upload" name="parameters"/>
+  </message>
+  <message name="uploadResponse">
+    <part element="tns:uploadResponse" name="parameters"/>
+  </message>
+  <message name="UploadException">
+    <part element="tns:UploadException" name="UploadException"/>
+  </message>
+  <portType name="ClientServices">
+    <operation name="synchConfig">
+      <input message="tns:synchConfig"/>
+      <output message="tns:synchConfigResponse"/>
+    </operation>
+    <operation name="upload">
+      <input message="tns:upload"/>
+      <output message="tns:uploadResponse"/>
+      <fault message="tns:UploadException" name="UploadException"/>
+    </operation>
+  </portType>
+  <binding type="tns:ClientServices" name="ClientServicesPortBinding">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="synchConfig">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="upload">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="UploadException">
+        <soap:fault use="literal" name="UploadException"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="ClientServices">
+    <port binding="tns:ClientServicesPortBinding" name="ClientServicesPort">
+      <soap:address location="http://localhost:8080/clientservices/clientservices"/>
+    </port>
+  </service>
+</definitions>

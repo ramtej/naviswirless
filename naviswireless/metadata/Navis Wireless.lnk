@@ -1,0 +1,1 @@
+255#"\Program Files\Navis\jre\bin\jvm.exe" -Xmx10M -Xss600K -Xoss10K -setcwd "\Program Files\Navis" -jar "\Program Files\Navis\naviswirelesscdc.jar"
